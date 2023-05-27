@@ -29,9 +29,10 @@ def greedy_mst(graph):
 # Define the graph
 graph = {
     'A': {'B': 5, 'C': 2},
-    'B': {'A': 5, 'C': 4, 'D': 2},
-    'C': {'A': 2, 'B': 4, 'D': 7},
-    'D': {'B': 2, 'C': 7}
+    'B': {'A': 5, 'C': 4, 'D': 2,'E' : 10},
+    'C': {'A': 2, 'B': 4, 'D': 7,'E':11},
+    'D': {'B': 2, 'C': 7,'E':5},
+    'E': {'B':10,'D':5,'C':4}
 }
 
 # Run the Greedy MST algorithm
@@ -41,6 +42,7 @@ mst = greedy_mst(graph)
 print("Minimum Spanning Tree:")
 for cost, node in mst:
     print(f"{node} - {cost}")
+print("total cost:")
 
 
 
